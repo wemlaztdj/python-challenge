@@ -13,7 +13,7 @@
 
 import pandas as pd
 
-df = pd.read_csv('python-challenge/PyBank/Resources/budget_data.csv')
+df = pd.read_csv('PyBank/Resources/budget_data.csv')
 
 total_months = df['Date'].count()
 net_total = df['Profit/Losses'].sum()
@@ -32,7 +32,7 @@ print('Greatest Increase in Profits: ',max_date,max_total)
 print('Greatest Decrease in Profits: ',min_date,min_total)
 
 
-with open('python-challenge/PyBank/analysis/PyBank_analysis.txt', 'w') as file:
+with open('PyBank/analysis/PyBank_analysis.txt', 'w') as file:
     file.write('Financial Analysis\n')
     file.write('----------------------------\n')
     file.write('Total Months: {}'.format(total_months) + '\n')
