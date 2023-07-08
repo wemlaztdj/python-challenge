@@ -9,6 +9,7 @@
 
 #The greatest decrease in profits (date and amount) over the entire period
 
+#In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
 import pandas as pd
 
@@ -29,3 +30,13 @@ print('Total:',net_total)
 print('Average Change: $',avg_total)
 print('Greatest Increase in Profits: ',max_date,max_total)
 print('Greatest Decrease in Profits: ',min_date,min_total)
+
+
+with open('python-challenge/PyBank/analysis/PyBank_analysis.txt', 'w') as file:
+    file.write('Financial Analysis\n')
+    file.write('----------------------------\n')
+    file.write('Total Months: {}'.format(total_months) + '\n')
+    file.write('Total: {}' .format(net_total) + '\n')
+    file.write('Average Change: $ {}' .format(avg_total) + '\n')
+    file.write('Greatest Increase in Profits: {}'.format(max_date) + ' {}'.format(max_total) + '\n')
+    file.write('Greatest Decrease in Profits: {}'.format(min_date) + ' {}'.format(min_total) + '\n')
