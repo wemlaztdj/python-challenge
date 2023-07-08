@@ -23,6 +23,7 @@ avg_total = round(df['Profit/Losses'].mean(),2)
 max_date = df.loc[df['Profit/Losses'].idxmax(),'Date']
 min_date = df.loc[df['Profit/Losses'].idxmin(),'Date']
 
+#print to terminal
 print('Financial Analysis')
 print('----------------------------')
 print('Total Months:',total_months)
@@ -31,7 +32,7 @@ print('Average Change: $',avg_total)
 print('Greatest Increase in Profits: ',max_date,max_total)
 print('Greatest Decrease in Profits: ',min_date,min_total)
 
-
+#write to file
 with open('PyBank/analysis/PyBank_analysis.txt', 'w') as file:
     file.write('Financial Analysis\n')
     file.write('----------------------------\n')
