@@ -22,16 +22,15 @@ with open('PyBank/Resources/budget_data.csv', 'r') as f:
 
     # loop the file
     for row in reader:
-
-        net_total += int(row[1])
-        
-
+      
         if total_months == 0:
             lastPrice = int(row[1])
-
-
+        
+        net_total += int(row[1])
         changes = int(row[1]) - lastPrice
         total_changes += changes
+        total_months += 1
+        lastPrice = int(row[1])
         
         # find max and min
         if changes >= max_changes :
@@ -41,9 +40,6 @@ with open('PyBank/Resources/budget_data.csv', 'r') as f:
         if changes <= min_changes :
             min_changes = changes
             min_date = row[0]
-        total_months += 1
-        lastPrice = int(row[1])
-
 
 avg_total = round(total_changes/(total_months-1),2)
 
