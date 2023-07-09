@@ -7,6 +7,11 @@
 #In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
 import csv
+import os
+file_path = os.path.abspath(__file__)
+dir_path = os.path.dirname(file_path)
+os.chdir(dir_path)
+
 total_months = 0
 net_total = 0
 total_changes = 0
@@ -16,7 +21,7 @@ max_date = ''
 min_date = ''
 lastPrice = 0
 changes =0
-with open('PyBank/Resources/budget_data.csv', 'r') as f:
+with open('./Resources/budget_data.csv', 'r') as f:
     reader = csv.reader(f)
     header = next(reader)
 
@@ -53,7 +58,7 @@ print('Greatest Increase in Profits: ',max_date,max_changes)
 print('Greatest Decrease in Profits: ',min_date,min_changes)
 
 #write to file
-with open('PyBank/analysis/PyBank_analysis.txt', 'w') as file:
+with open('./analysis/PyBank_analysis.txt', 'w') as file:
     file.write('Financial Analysis\n')
     file.write('----------------------------\n')
     file.write('Total Months: '+ str(total_months) + '\n')

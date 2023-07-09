@@ -8,11 +8,16 @@
 # In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
 import csv
+import os
+file_path = os.path.abspath(__file__)
+dir_path = os.path.dirname(file_path)
+os.chdir(dir_path)
+
 total_votes =0
 candidates ={}
 
 # read the file
-with open('PyPoll/Resources/election_data.csv', 'r') as f:
+with open('./Resources/election_data.csv', 'r') as f:
   reader = csv.reader(f)
   header = next(reader)
   for row in reader:
@@ -39,7 +44,7 @@ print('Winner:',winner)
 print('-------------------------')
 
 #write to file
-with open('PyPoll/analysis/PyPoll_analysis.txt', 'w') as file:
+with open('./analysis/PyPoll_analysis.txt', 'w') as file:
     file.write('Election Results\n')
     file.write('-------------------------\n')
     file.write('Total Votes: '+ str(total_votes) +'\n')
