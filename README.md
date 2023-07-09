@@ -2,23 +2,26 @@
 Module 3 Challenge has two Python challenges - PyBank and PyPoll.
 
 Resources folders that contain the dataset, the CSV file.
-The analysis folders contain the text file that has the results.
+The analysis folders contain the results file.
 
 ## PyBank
+The dataset has two columns: "Date" and "Profit/Losses".
 
 ![example](https://github.com/wemlaztdj/python-challenge/blob/main/Screenshot/budget_data.png)
 
-The total number of months included in the dataset
+The Python script will calculate:
 
-The net total amount of "Profit/Losses" over the entire period
+The total number of months included in the dataset.
 
-The changes in "Profit/Losses" over the entire period, and then the average of those changes
+The total net amount of "Profit/Losses" over the entire period.
 
-The greatest increase in profits (date and amount) over the entire period
+The changes in "Profit/Losses" over the entire period, and then the average of those changes.
 
-The greatest decrease in profits (date and amount) over the entire period
+The greatest increase in profits (date and amount) over the entire period.
 
-export a text file with the results
+The greatest decrease in profits (date and amount) over the entire period.
+
+and export a text file with the results. 
 
 ![example](https://github.com/wemlaztdj/python-challenge/blob/main/Screenshot/PyBank_analysis.png)
 
@@ -26,19 +29,22 @@ export a text file with the results
 
 ## PyPoll
 
+The dataset has three columns: "Voter ID", "County", and "Candidate".
 
 ![example](https://github.com/wemlaztdj/python-challenge/blob/main/Screenshot/election_data.png)
 
-The total number of votes cast
+The Python script will calculate:
 
-A complete list of candidates who received votes
+The total number of votes cast.
 
-The percentage of votes each candidate won
+A complete list of candidates who received votes.
 
-The total number of votes each candidate won
+The percentage of votes each candidate won.
 
-The winner of the election based on the popular vote
+The total number of votes each candidate won.
 
-export a text file with the results
+The winner of the election is based on the popular vote.
+
+and export results to a text file.
 
 ![example](https://github.com/wemlaztdj/python-challenge/blob/main/Screenshot/PyPoll_analysis.png)
