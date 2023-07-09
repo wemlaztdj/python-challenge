@@ -20,7 +20,7 @@ with open('PyBank/Resources/budget_data.csv', 'r') as f:
     reader = csv.reader(f)
     header = next(reader)
 
-    # loop the file
+    # read the file
     for row in reader:
       
         if total_months == 0:
@@ -56,8 +56,8 @@ print('Greatest Decrease in Profits: ',min_date,min_changes)
 with open('PyBank/analysis/PyBank_analysis.txt', 'w') as file:
     file.write('Financial Analysis\n')
     file.write('----------------------------\n')
-    file.write('Total Months: {}'.format(total_months) + '\n')
-    file.write('Total: {}' .format(net_total) + '\n')
-    file.write('Average Change: $ {}' .format(avg_total) + '\n')
-    file.write('Greatest Increase in Profits: {}'.format(max_date) + ' {}'.format(max_changes) + '\n')
-    file.write('Greatest Decrease in Profits: {}'.format(min_date) + ' {}'.format(min_changes) + '\n')
+    file.write('Total Months: '+ str(total_months) + '\n')
+    file.write('Total: ' + str(net_total) + '\n')
+    file.write('Average Change: $ '+ str(avg_total) + '\n')
+    file.write('Greatest Increase in Profits: '+ str(max_date) + ' '+ str(max_changes) + '\n')
+    file.write('Greatest Decrease in Profits: '+ str(min_date) + ' '+ str(min_changes) + '\n')
