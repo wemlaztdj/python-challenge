@@ -22,7 +22,7 @@ The greatest increase in profits (date and amount) over the entire period.
 
 The greatest decrease in profits (date and amount) over the entire period.
 
-and export a text file with the results. 
+Print the analysis to the terminal and export the results to a text file. The results file is shown below.
 
 ![example](https://github.com/wemlaztdj/python-challenge/blob/main/Screenshot/PyBank_analysis.png)
 
@@ -46,7 +46,7 @@ The total number of votes each candidate won.
 
 The winner of the election is based on the popular vote.
 
-and export results to a text file.
+Print the analysis to the terminal and export the results to a text file. The results file is shown below.
 
 ![example](https://github.com/wemlaztdj/python-challenge/blob/main/Screenshot/PyPoll_analysis.png)
 
